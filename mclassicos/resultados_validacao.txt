@@ -1,19 +1,25 @@
-___Rodada 4___
+___Rodada Validação SVM sem STEM___
 (15m)svm1
 Melhores parâmetros: {'C': 1, 'gamma': 'scale', 'kernel': 'linear'}
 Acurácia média de Treino (Validação Cruzada): 0.9669
 Acurácia média de Validação (Validação Cruzada): 0.8544
 
 
-___Rodada 5___
+___Rodada Validação SVM com STEM___
 (13m)svm2
 Melhores parâmetros: {'C': 10, 'gamma': 'scale', 'kernel': 'rbf'}
 Acurácia média de Treino (Validação Cruzada): 0.9988
 Acurácia média de Validação (Validação Cruzada): 0.8465
 
 
-___Rodada 6___
+___Rodada Validação Random Forest sem STEM___
 (17m)rf1
 Melhores parâmetros: {'max_depth': None, 'min_samples_split': 5, 'n_estimators':200}
 Acurácia média de Treino (Validação Cruzada): 0.9989
 Acurácia média de Validação (Validação Cruzada): 0.8443
+
+___Rodada Validação Random Forest com STEM___
+(12m)rf2
+Melhores parâmetros: {'max_depth': None, 'min_samples_split': 5, 'n_estimators':200}
+Acurácia média de Treino (Validação Cruzada): 0.9984
+Acurácia média de Validação (Validação Cruzada): 0.8380

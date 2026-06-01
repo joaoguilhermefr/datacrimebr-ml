@@ -1,0 +1,38 @@
+____Rodada Teste SVM____
+(1m)svmf
+Parâmetros: {'C': 1, 'gamma': 'scale', 'kernel': 'linear'}
+
+--- Resultados da Avaliação ---
+Acurácia Geral: 85.66%
+
+Relatório de Classificação:
+		precision	recall	   f1-score	support
+	    0	     0.85         0.87	       0.86	    998
+	    1	     0.87	  0.85         0.86        1003
+	    
+     accuracy				       0.86	   2001
+    macro avg	     0.86         0.86         0.86        2001
+ weighted avg        0.86         0.86         0.86        2001
+
+
+ ___Rodada Teste Random Forrest ___
+(1m)rff
+Melhores parâmetros: {'max_depth': None, 'min_samples_split': 5, 'n_estimators':200}
+
+--- Avaliação Final com Conjunto de Teste ---
+Acurácia Geral: 0.8491
+
+Relatório de Classificação:
+		precision	recall	   f1-score	support
+		
+	    0	     0.86         0.83	       0.85	   1000
+	    1	     0.84	  0.86         0.85        1001
+	    
+     accuracy				       0.85	   2001
+    macro avg	     0.85         0.85         0.85        2001
+ weighted avg        0.85         0.85         0.85        2001
+ 
+ Matriz de Confusão:
+ [[834  166]
+  [136  865]]
+ 
