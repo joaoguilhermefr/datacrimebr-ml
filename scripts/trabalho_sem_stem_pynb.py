@@ -6,7 +6,7 @@ data_col_import = data.drop(["INSULT","IDENTITY_ATTACK",	"SEVERE_TOXICITY",	"THR
 #data_col_import.tail()
 
 
-data_col_import = data_col_import.drop(data_col_import.index[10001:61715])
+data_col_import = data_col_import[data_col_import['KEYWORD'] == 1]
 
 #data_col_import.tail()
 
@@ -101,5 +101,5 @@ tfidf = TfidfVectorizer()
 X_tfidf = tfidf.fit_transform(data_col_import["text"])
 
 # Salvar os dados limpos para uso nos modelos
-data_col_import.to_csv('dados_limpos_sem_stem.csv', index=False)
+data_col_import.to_csv('data/dados_limpos_sem_stem.csv', index=False)
 print("Dados limpos salvos com sucesso em 'dados_limpos_sem_stem.csv'!")

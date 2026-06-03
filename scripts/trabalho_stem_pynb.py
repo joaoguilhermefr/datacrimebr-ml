@@ -5,7 +5,7 @@ data.head()
 data_col_import = data.drop(["INSULT","IDENTITY_ATTACK",	"SEVERE_TOXICITY",	"THREAT", "PROFANITY",	"TOXICITY",	"POSITIVE",	"NEUTRAL",	"NEGATIVE"], axis=1)
 #data_col_import.tail()
 
-data_col_import = data_col_import.drop(data_col_import.index[10001:61715])
+data_col_import = data_col_import[data_col_import['KEYWORD'] == 1]
 
 #data_col_import.tail()
 
