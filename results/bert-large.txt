@@ -1,0 +1,68 @@
+GPU disponível? Sim
+Carregando dados...
+Baixando/carregando BERTimbau...
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+config.json: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 648/648 [00:00<?, ?B/s]
+C:\Users\Luciano\AppData\Roaming\Python\Python312\site-packages\huggingface_hub\file_download.py:138: UserWarning: `huggingface_hub` cache-system uses symlinks by default to efficiently store duplicated files but your machine does not support them in C:\Users\Luciano\.cache\huggingface\hub\models--neuralmind--bert-large-portuguese-cased. Caching files will still work but in a degraded version that might require more space on your disk. This warning can be disabled by setting the `HF_HUB_DISABLE_SYMLINKS_WARNING` environment variable. For more details, see https://huggingface.co/docs/huggingface_hub/how-to-cache#limitations.
+To support symlinks on Windows, you either need to activate Developer Mode or to run Python as an administrator. In order to activate developer mode, see this article: https://docs.microsoft.com/en-us/windows/apps/get-started/enable-your-device-for-development
+  warnings.warn(message)
+tokenizer_config.json: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 155/155 [00:00<?, ?B/s]
+vocab.txt: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 210k/210k [00:00<00:00, 52.4MB/s]
+added_tokens.json: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2.00/2.00 [00:00<?, ?B/s]
+special_tokens_map.json: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 112/112 [00:00<?, ?B/s]
+pytorch_model.bin: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1.34G/1.34G [00:20<00:00, 66.6MB/s]
+Loading weights: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 391/391 [00:00<00:00, 35548.80it/s]
+[transformers] BertForSequenceClassification LOAD REPORT from: neuralmind/bert-large-portuguese-cased
+Key                                        | Status     | Details
+-------------------------------------------+------------+--------
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED |        
+cls.predictions.transform.dense.bias       | UNEXPECTED |        
+cls.predictions.transform.dense.weight     | UNEXPECTED |        
+cls.predictions.bias                       | UNEXPECTED |        
+cls.predictions.decoder.weight             | UNEXPECTED |        
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED |        
+cls.seq_relationship.bias                  | UNEXPECTED |        
+cls.seq_relationship.weight                | UNEXPECTED |        
+classifier.weight                          | MISSING    |        
+classifier.bias                            | MISSING    |        
+
+Notes:
+- UNEXPECTED:   can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:      those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+Tokenizando os textos...
+Map: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 8000/8000 [00:00<00:00, 16696.11 examples/s]
+Map: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2000/2000 [00:00<00:00, 21618.23 examples/s]
+model.safetensors:   0%|                                                                                                                                                                                                                 | 0.00/1.34G [00:00<?, ?B/s]
+Iniciando fine-tuning do BERTimbau
+model.safetensors: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1.34G/1.34G [00:21<00:00, 63.2MB/s]
+{'loss': '0.3665', 'grad_norm': '14.8', 'learning_rate': '1.335e-05', 'epoch': '1'}                                                                                                                                               | 3/1500 [00:18<2:52:03,  6.90s/it]
+{'eval_loss': '0.3601', 'eval_accuracy': '0.8665', 'eval_f1': '0.8746', 'eval_precision': '0.8246', 'eval_recall': '0.931', 'eval_runtime': '192.7', 'eval_samples_per_second': '10.38', 'eval_steps_per_second': '0.649', 'epoch': '1'}                             
+Writing model shards: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:02<00:00,  2.02s/it]
+{'loss': '0.2289', 'grad_norm': '14.87', 'learning_rate': '6.68e-06', 'epoch': '2'}                                                                                                                                           | 500/1500 [1:12:06<2:17:53,  8.27s/it]
+{'eval_loss': '0.362', 'eval_accuracy': '0.888', 'eval_f1': '0.8878', 'eval_precision': '0.8896', 'eval_recall': '0.886', 'eval_runtime': '192.9', 'eval_samples_per_second': '10.37', 'eval_steps_per_second': '0.648', 'epoch': '2'}                               
+Writing model shards: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:02<00:00,  2.39s/it]
+{'loss': '0.1309', 'grad_norm': '12.37', 'learning_rate': '1.333e-08', 'epoch': '3'}█████████████████████████████████████████████████████████████████                                                                        | 1000/1500 [2:24:26<1:08:57,  8.28s/it]
+{'eval_loss': '0.4912', 'eval_accuracy': '0.8845', 'eval_f1': '0.8862', 'eval_precision': '0.8737', 'eval_recall': '0.899', 'eval_runtime': '192.8', 'eval_samples_per_second': '10.37', 'eval_steps_per_second': '0.648', 'epoch': '3'}                             
+Writing model shards: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:03<00:00,  3.32s/it]
+{'train_runtime': '1.301e+04', 'train_samples_per_second': '1.844', 'train_steps_per_second': '0.115', 'train_loss': '0.2421', 'epoch': '3'}███████████████████████████████████████████████████████████████████████████████████| 1500/1500 [3:36:46<00:00,  8.27s/it]
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1500/1500 [3:36:54<00:00,  8.68s/it]
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1500/1500 [3:36:53<00:00,  8.27s/it]
+Tempo total de Treinamento: 13014.56 segundos
+
+Avaliando o modelo na base de teste
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 125/125 [03:12<00:00,  1.54s/it]
+Tempo de Inferência (Teste): 194.4777 segundos
+
+Resultados Finais BERTimbau:
+eval_loss: 0.36010923981666565
+eval_accuracy: 0.8665
+eval_f1: 0.8745890089243776
+eval_precision: 0.8246235606731621
+eval_recall: 0.931
+eval_runtime: 194.4757
+eval_samples_per_second: 10.284
+eval_steps_per_second: 0.643
+epoch: 3.0
+Writing model shards: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:01<00:00,  1.93s/it]
+
+Modelo treinado e salvo com sucesso
