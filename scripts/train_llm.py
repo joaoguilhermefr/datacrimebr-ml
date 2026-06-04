@@ -30,8 +30,8 @@ hg_dataset = DatasetDict({
 })
 
 print("Baixando/carregando BERTimbau...")
-#model_name = "neuralmind/bert-base-portuguese-cased"
-model_name = "neuralmind/bert-large-portuguese-cased"
+model_name = "neuralmind/bert-base-portuguese-cased"
+#model_name = "neuralmind/bert-large-portuguese-cased"
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 model = AutoModelForSequenceClassification.from_pretrained(model_name, num_labels=2)
 
@@ -49,7 +49,7 @@ def compute_metrics(pred):
     return {'accuracy': acc, 'f1': f1, 'precision': precision, 'recall': recall}
 
 training_args = TrainingArguments(
-    output_dir="./resultados_bertimbau",
+    output_dir="./results/bertimbau_base",
     learning_rate=2e-5,
     per_device_train_batch_size=16,
     per_device_eval_batch_size=16,
@@ -85,6 +85,6 @@ for key, value in eval_results.items():
     print(f"{key}: {value}")
 
 
-trainer.save_model("./meu_bertimbau_crimes")
-tokenizer.save_pretrained("./meu_bertimbau_crimes")
+trainer.save_model("./results/meu_bertimbau_base_crimes")
+tokenizer.save_pretrained("./results/meu_bertimbau_base_crimes")
 print("\nModelo treinado e salvo com sucesso")
