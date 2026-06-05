@@ -22,7 +22,7 @@ X_tfidf = tfidf.fit_transform(data_col_import["text"])
 #X = dados.drop(columns=['CRIME'])
 y = data_col_import['CRIME']
 
-X_treino, X_teste, y_treino, y_teste = train_test_split(X_tfidf, y, test_size=0.2, random_state=13)
+X_treino, X_teste, y_treino, y_teste = train_test_split(X_tfidf, y, test_size=0.2, random_state=42, stratify=y)
 
 
 # Parametros com melhor resultado na validação

@@ -20,10 +20,10 @@ X_tfidf = tfidf.fit_transform(data_col_import["text"])
 #X = dados.drop(columns=['CRIME'])
 y = data_col_import['CRIME']
 
-X_treino, X_teste, y_treino, y_teste = train_test_split(X_tfidf, y, test_size=0.2, random_state=13, stratify=y)
+X_treino, X_teste, y_treino, y_teste = train_test_split(X_tfidf, y, test_size=0.2, random_state=42, stratify=y)
 
 # Paramentros com melhores resultados na validação
-rf_model = RandomForestClassifier(max_depth=None, min_samples_split=5, n_estimators=200,random_state=13)
+rf_model = RandomForestClassifier(max_depth=None, min_samples_split=5, n_estimators=200,random_state=42)
 
 # Treino do modelo
 rf_model.fit(X_treino, y_treino)
