@@ -1,17 +1,17 @@
 --- Avaliação Final com Conjunto de Teste (SVM) ---
-Acurácia: 0.863500
-Precisão (weighted): 0.864448
-Recall (weighted): 0.863500
-F1-score (weighted): 0.863411
-Tempo de inferência total (s): 1.269761
+Acurácia: 0.866000
+Precisão (weighted): 0.866000
+Recall (weighted): 0.866000
+F1-score (weighted): 0.866000
+Tempo de inferência total (s): 1.154724
 Tamanho do conjunto de teste: 2000
 
 Relatório de Classificação:
               precision    recall  f1-score   support
 
-           0       0.85      0.89      0.87      1000
-           1       0.88      0.84      0.86      1000
+           0       0.87      0.87      0.87      1000
+           1       0.87      0.87      0.87      1000
 
-    accuracy                           0.86      2000
-   macro avg       0.86      0.86      0.86      2000
-weighted avg       0.86      0.86      0.86      2000
+    accuracy                           0.87      2000
+   macro avg       0.87      0.87      0.87      2000
+weighted avg       0.87      0.87      0.87      2000

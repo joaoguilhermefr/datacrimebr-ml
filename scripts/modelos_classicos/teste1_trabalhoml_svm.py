@@ -22,10 +22,15 @@ X_tfidf = tfidf.fit_transform(data_col_import["text"])
 #X = dados.drop(columns=['CRIME'])
 y = data_col_import['CRIME']
 
-X_treino, X_teste, y_treino, y_teste = train_test_split(X_tfidf, y, test_size=0.2, random_state=42, stratify=y)
+X_treino, X_teste, y_treino, y_teste = train_test_split(data_col_import["text"], y, test_size=0.2, random_state=42, stratify=y)
+
+# vetorização TF-IDF
+tfidf = TfidfVectorizer()
+X_treino = tfidf.fit_transform(X_treino)
+X_teste = tfidf.transform(X_teste)
 
 # Grade de parametros para teste 
-svm = SVC(random_state=13)
+svm = SVC(random_state=42)
 
 param_grid = {
     'C': [0.1, 1, 10],

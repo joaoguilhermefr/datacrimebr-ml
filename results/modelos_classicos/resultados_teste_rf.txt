@@ -1,21 +1,21 @@
 --- Avaliação Final com Conjunto de Teste (Random Forest) ---
-Acurácia: 0.861000
-Precisão (weighted): 0.861117
-Recall (weighted): 0.861000
-F1-score (weighted): 0.860989
-Tempo de inferência total (s): 0.085001
+Acurácia: 0.856500
+Precisão (weighted): 0.856689
+Recall (weighted): 0.856500
+F1-score (weighted): 0.856481
+Tempo de inferência total (s): 0.158693
 Tamanho do conjunto de teste: 2000
 
 Relatório de Classificação:
               precision    recall  f1-score   support
 
-           0       0.85      0.87      0.86      1000
-           1       0.87      0.85      0.86      1000
+           0       0.86      0.84      0.85      1000
+           1       0.85      0.87      0.86      1000
 
     accuracy                           0.86      2000
    macro avg       0.86      0.86      0.86      2000
 weighted avg       0.86      0.86      0.86      2000
 
 Matriz de Confusão:
-[[870 130]
- [148 852]]
+[[845 155]
+ [132 868]]
