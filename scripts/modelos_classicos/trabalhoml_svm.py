@@ -8,6 +8,7 @@ import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.model_selection import train_test_split
 from sklearn.svm import SVC
+from sklearn.calibration import CalibratedClassifierCV
 from sklearn.metrics import classification_report, accuracy_score, precision_recall_fscore_support
 
 filepath_result = Path("results" , "modelos_classicos")
@@ -32,6 +33,7 @@ X_treino, X_teste, y_treino, y_teste = train_test_split(X_tfidf, y, test_size=0.
 
 # Parametros com melhor resultado na validação
 svm = SVC(kernel='rbf', C=1, gamma='scale')
+svm = CalibratedClassifierCV(svm, ensemble=False) 
 
 #treino do modelo
 svm.fit(X_treino, y_treino)
