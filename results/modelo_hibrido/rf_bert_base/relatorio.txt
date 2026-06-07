@@ -1,0 +1,33 @@
+Experimento: rf_bert_base
+Camada 1: rf
+Camada 2: bert_base
+Threshold de roteamento: 0.70
+Fração roteada para LLM: 0.2705
+
+--- Camada 1 ---
+Acurácia: 0.856500
+Precisão ponderada: 0.856689
+Recall ponderado: 0.856500
+F1 ponderado: 0.856481
+
+--- Camada 2 ---
+Acurácia: 0.876500
+Precisão ponderada: 0.877815
+Recall ponderado: 0.876500
+F1 ponderado: 0.876392
+
+--- Híbrido ---
+Acurácia: 0.878000
+Precisão ponderada: 0.878733
+Recall ponderado: 0.878000
+F1 ponderado: 0.877941
+
+Relatório de classificação do híbrido:
+              precision    recall  f1-score   support
+
+           0       0.90      0.86      0.88      1000
+           1       0.86      0.90      0.88      1000
+
+    accuracy                           0.88      2000
+   macro avg       0.88      0.88      0.88      2000
+weighted avg       0.88      0.88      0.88      2000

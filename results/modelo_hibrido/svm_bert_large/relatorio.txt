@@ -1,0 +1,33 @@
+Experimento: svm_bert_large
+Camada 1: svm
+Camada 2: bert_large
+Threshold de roteamento: 0.70
+Fração roteada para LLM: 0.1455
+
+--- Camada 1 ---
+Acurácia: 0.866000
+Precisão ponderada: 0.866000
+Recall ponderado: 0.866000
+F1 ponderado: 0.866000
+
+--- Camada 2 ---
+Acurácia: 0.866500
+Precisão ponderada: 0.872702
+Recall ponderado: 0.866500
+F1 ponderado: 0.865942
+
+--- Híbrido ---
+Acurácia: 0.880500
+Precisão ponderada: 0.881492
+Recall ponderado: 0.880500
+F1 ponderado: 0.880422
+
+Relatório de classificação do híbrido:
+              precision    recall  f1-score   support
+
+           0       0.90      0.85      0.88      1000
+           1       0.86      0.91      0.88      1000
+
+    accuracy                           0.88      2000
+   macro avg       0.88      0.88      0.88      2000
+weighted avg       0.88      0.88      0.88      2000
